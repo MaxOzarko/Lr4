@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ozarko PI-20-02</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="tabs">
+        <div class="tab whiteborder">border-radius</div>
+        <div class="tab">overflow-x</div>
+        <div class="tab">overflow-y</div>
+        <div class="tabContent">
+            <div>Верхній лівий радіус:
+                <input type="range" id="rtl" min="0" max="100" value="0" oninput="generate()">
+                <input type="text" id="ttl" value="0">
+            </div>
+            <div>Верхній правий радіус:
+                <input type="range" id="rtr" min="0" max="100" value="0" oninput="generate()">
+                <input type="text" id="ttr" value="0">
+            </div>
+            <div>Нижній лівий радіус:
+                <input type="range" id="rbl" min="0" max="100" value="0" oninput="generate()">
+                <input type="text" id="tbl" value="0">
+            </div>
+            <div>Нижній правий радіус:
+                <input type="range" id="rbr" min="0" max="100" value="0" oninput="generate()">
+                <input type="text" id="tbr" value="0">
+            </div>    
+            <div id="block"></div>
+            <textarea id="cssCode" readonly></textarea>            
+        </div>
+        <div class="tabContent">
+            <div id="content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos esse tempore, pariatur, saepe non assumenda aut magnam modi doloremque possimus eos laudantium quidem eveniet quas aperiam nulla aliquid ad odio.
+            </div>
+            <div id="overflowControls">
+                <label for="overflowX">Overflow-x:</label>
+                <select id="overflowX" onchange="applyOverflowX()">
+                  <option value="visible">Visible</option>
+                  <option value="hidden">Hidden</option>
+                  <option value="scroll">Scroll</option>
+                  <option value="auto">Auto</option>
+                </select>
+            </div>
+            <textarea id="cssCodeOverX" readonly></textarea>
+        </div>
+        <div class="tabContent">
+            <div id="content2">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos esse tempore, pariatur, saepe non assumenda aut magnam modi doloremque possimus eos laudantium quidem eveniet quas aperiam nulla aliquid ad odio.
+            </div>
+            <div id="overflowControls">
+                <label for="overflowY">Overflow-y:</label>
+                <select id="overflowY" onchange="applyOverflowY()">
+                  <option value="visible">Visible</option>
+                  <option value="hidden">Hidden</option>
+                  <option value="scroll">Scroll</option>
+                  <option value="auto">Auto</option>
+                </select>
+            </div>
+            <textarea id="cssCodeOverY" readonly></textarea>
+        </div>
+    </div>
+    <script src="script/script.js"></script>    
+</body>
+</html>
